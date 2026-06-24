@@ -36,59 +36,122 @@
     </div>
 
     <div class="skills">
-      <div class="temp" id="skill1">
-        <p class="skill_title">HTML</p>
-        <p>Langage de balisage pour structurer le contenu web</p>
-        <ul>
-          <li>
-            <label for="meter1">Niveau :</label>
-            <meter id="meter1" min="0" max="100" low="33" high="66" optimum="80" value="90"></meter>
-          </li>
-        </ul>
+      <div class="skill-section">
+        <h2 class="section-title">Backend</h2>
+        <div class="skill-grid">
+          <div class="temp" id="skill-php">
+            <p class="skill_title">PHP</p>
+            <p>Langage serveur pour développer la logique backend.</p>
+            <ul>
+              <li>
+                <label for="meter-php">Niveau :</label>
+                <meter id="meter-php" min="0" max="100" low="33" high="66" optimum="80" value="45"></meter>
+              </li>
+            </ul>
+          </div>
+          <div class="temp" id="skill-symfony">
+            <p class="skill_title">Symfony</p>
+            <p>Framework PHP pour structurer et accélérer les applications backend.</p>
+            <ul>
+              <li>
+                <label for="meter-symfony">Niveau :</label>
+                <meter id="meter-symfony" min="0" max="100" low="33" high="66" optimum="80" value="40"></meter>
+              </li>
+            </ul>
+          </div>
+          <div class="temp" id="skill-db">
+            <p class="skill_title">Base de données</p>
+            <p>Modélisation et gestion des données pour les applications web.</p>
+            <ul>
+              <li>
+                <label for="meter-db">Niveau :</label>
+                <meter id="meter-db" min="0" max="100" low="33" high="66" optimum="80" value="60"></meter>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="temp" id="skill2">
-        <p class="skill_title">CSS</p>
-        <p>Feuilles de style pour mettre en forme les pages web</p>
-        <ul>
-          <li>
-            <label for="meter2">Niveau :</label>
-            <meter id="meter2" min="0" max="100" low="33" high="66" optimum="80" value="80"></meter>
-          </li>
-        </ul>
+      <div class="skill-section">
+        <h2 class="section-title">Frontend</h2>
+        <div class="skill-grid">
+          <div class="temp" id="skill-html">
+            <p class="skill_title">HTML</p>
+            <p>Langage de balisage pour structurer le contenu web.</p>
+            <ul>
+              <li>
+                <label for="meter-html">Niveau :</label>
+                <meter id="meter-html" min="0" max="100" low="33" high="66" optimum="80" value="90"></meter>
+              </li>
+            </ul>
+          </div>
+          <div class="temp" id="skill-css">
+            <p class="skill_title">CSS</p>
+            <p>Feuilles de style pour mettre en forme les pages web avec cohérence.</p>
+            <ul>
+              <li>
+                <label for="meter-css">Niveau :</label>
+                <meter id="meter-css" min="0" max="100" low="33" high="66" optimum="80" value="80"></meter>
+              </li>
+            </ul>
+          </div>
+          <div class="temp" id="skill-js">
+            <p class="skill_title">JavaScript</p>
+            <p>Langage pour rendre les interfaces interactives et dynamiques.</p>
+            <ul>
+              <li>
+                <label for="meter-js">Niveau :</label>
+                <meter id="meter-js" min="0" max="100" low="33" high="66" optimum="80" value="50"></meter>
+              </li>
+            </ul>
+          </div>
+          <div class="temp" id="skill-twig">
+            <p class="skill_title">Twig</p>
+            <p>Moteur de templates pour créer des vues backend propres et modulaires.</p>
+            <ul>
+              <li>
+                <label for="meter-twig">Niveau :</label>
+                <meter id="meter-twig" min="0" max="100" low="33" high="66" optimum="80" value="65"></meter>
+              </li>
+            </ul>
+          </div>
+          <div class="temp" id="skill-fullcalendar">
+            <p class="skill_title">FullCalendar</p>
+            <p>Bibliothèque JavaScript pour gérer des calendriers interactifs.</p>
+            <ul>
+              <li>
+                <label for="meter-fullcalendar">Niveau :</label>
+                <meter id="meter-fullcalendar" min="0" max="100" low="33" high="66" optimum="80" value="80"></meter>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="temp" id="skill3">
-        <p class="skill_title">JavaScript</p>
-        <p>Langage de programmation pour l'interactivité web</p>
-        <ul>
-          <li>
-            <label for="meter3">Niveau :</label>
-            <meter id="meter3" min="0" max="100" low="33" high="66" optimum="80" value="40"></meter>
-          </li>
-        </ul>
-      </div>
-
-      <div class="temp" id="skill4">
-        <p class="skill_title">Python</p>
-        <p>Langage de programmation polyvalent</p>
-        <ul>
-          <li>
-            <label for="meter4">Niveau :</label>
-            <meter id="meter4" min="0" max="100" low="33" high="66" optimum="80" value="15"></meter>
-          </li>
-        </ul>
-      </div>
-
-      <div class="temp" id="skill6">
-        <p class="skill_title">Git</p>
-        <p>Système de contrôle de version</p>
-        <ul>
-          <li>
-            <label for="meter6">Niveau :</label>
-            <meter id="meter6" min="0" max="100" low="33" high="66" optimum="80" value="30"></meter>
-          </li>
-        </ul>
+      <div class="skill-section">
+        <h2 class="section-title">Outils</h2>
+        <div class="skill-grid">
+          <div class="temp" id="skill-python">
+            <p class="skill_title">Python</p>
+            <p>Langage polyvalent utilisé pour scripts et automatisation.</p>
+            <ul>
+              <li>
+                <label for="meter-python">Niveau :</label>
+                <meter id="meter-python" min="0" max="100" low="33" high="66" optimum="80" value="15"></meter>
+              </li>
+            </ul>
+          </div>
+          <div class="temp" id="skill-git">
+            <p class="skill_title">Git</p>
+            <p>Gestion de version pour suivre et partager le code en équipe.</p>
+            <ul>
+              <li>
+                <label for="meter-git">Niveau :</label>
+                <meter id="meter-git" min="0" max="100" low="33" high="66" optimum="80" value="40"></meter>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </main>
