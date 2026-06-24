@@ -342,4 +342,14 @@
         border-radius: 20px;
         min-height: 140px;
       }
+
+      #snake_effect {
+        
+      }
+
+      #snake {
+        color :rgba(255, 255, 255, 0.7);
+        font-size: 5rem;
+        offset-path: calc(5,3,1);
+      }
     }

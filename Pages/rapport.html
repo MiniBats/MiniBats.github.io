@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapport de stage</title>
+  <link rel="stylesheet" href="../css/xppro.css">
+</head>
+<body>
+  <main>
+    <div id="title">
+      <a id="home_btn" href="../index.html">&lt;</a>
+      <div id="title_text">
+        <h1>Rapport de stage</h1>
+      </div>
+    </div>
+
+    <div class="experiences-grid">
+      <div class="experience-card">
+        <div class="experience-header">
+          <span class="experience-type">Stage</span>
+          <h3>Rapport de stage : Application de gestion</h3>
+          <div class="experience-date">26/05/2026 - 26/06/2026</div>
+        </div>
+        <div class="experience-content">
+          <div class="company">landry AVI</div>
+          <div class="experience-description">
+            Pendant ce stage, j'ai contribué au développement d'une application de gestion de contrats et d'un calendrier dynamique, en utilisant PHP, Symfony, Twig et JavaScript.
+            J'ai participé à l'architecture du projet, à l'intégration des fonctionnalités et à la validation de l'expérience utilisateur.
+          </div>
+          <div class="company">Points clés du rapport</div>
+          <div class="experience-description">
+            • Contexte : gestion de contrats pour une entreprise de services.
+            <br>• Missions : création d'un calendrier interactif, gestion des événements et suivi des heures.
+            <br>• Résultats : une interface réactive et une organisation plus fluide des plannings.
+            <br>• Compétences : PHP, Symfony, Twig, JavaScript, FullCalendar.
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">Analyse</span>
+            <span class="skill-tag">Développement</span>
+            <span class="skill-tag">Organisation</span>
+            <span class="skill-tag">Test</span>
+          </div>
+          <div class="rapport-actions">
+            <a href="#" id="openCarousel" class="rapport-link">Visualisation du site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-modal" id="carouselModal" aria-hidden="true">
+      <div class="carousel-box">
+        <div class="carousel-header">
+          <h2>Galerie du projet</h2>
+          <button class="carousel-close" id="closeCarousel" aria-label="Fermer le carrousel">×</button>
+        </div>
+        <div class="carousel-slide active">
+          <img src="../img/stage1/Calendar.png" alt="Capture écran calendrier stage 1">
+          <div class="carousel-caption"></div>
+        </div>
+        <div class="carousel-slide">
+          <img src="../img/stage1/Connexion.png" alt="Capture écran connexion stage 1">
+          <div class="carousel-caption">Écran de connexion utilisateur</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="../img/stage1/Contrat.png" alt="Capture écran contrat stage 1">
+          <div class="carousel-caption">Gestion des contrats</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="../img/stage1/Formulaire-event.png" alt="Capture écran formulaire événement stage 1">
+          <div class="carousel-caption">Création d'événements</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="../img/stage1/Intervention.png" alt="Capture écran intervention stage 1">
+          <div class="carousel-caption">Suivi des interventions</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="../img/stage1/recherchect.png" alt="Capture écran recherche contact stage 1">
+          <div class="carousel-caption">Recherche de contact</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="../img/stage1/typect.png" alt="Capture écran type contact stage 1">
+          <div class="carousel-caption">Type de contact</div>
+        </div>
+
+        <div class="carousel-nav">
+          <button class="carousel-button" id="prevSlide" aria-label="Image précédente">‹</button>
+          <button class="carousel-button" id="nextSlide" aria-label="Image suivante">›</button>
+        </div>
+        <div class="carousel-thumbs" id="carouselThumbs">
+          <div class="carousel-thumb active" data-index="0"><img src="../img/stage1/Calendar.png" alt="Aperçu calendrier"></div>
+          <div class="carousel-thumb" data-index="1"><img src="../img/stage1/Connexion.png" alt="Aperçu connexion"></div>
+          <div class="carousel-thumb" data-index="2"><img src="../img/stage1/Contrat.png" alt="Aperçu contrat"></div>
+          <div class="carousel-thumb" data-index="3"><img src="../img/stage1/Formulaire-event.png" alt="Aperçu formulaire événement"></div>
+          <div class="carousel-thumb" data-index="4"><img src="../img/stage1/Intervention.png" alt="Aperçu intervention"></div>
+          <div class="carousel-thumb" data-index="5"><img src="../img/stage1/recherchect.png" alt="Aperçu recherche contact"></div>
+          <div class="carousel-thumb" data-index="6"><img src="../img/stage1/typect.png" alt="Aperçu type contact"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const openCarousel = document.getElementById('openCarousel');
+    const closeCarousel = document.getElementById('closeCarousel');
+    const carouselModal = document.getElementById('carouselModal');
+    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+    const thumbs = Array.from(document.querySelectorAll('.carousel-thumb'));
+    const prevButton = document.getElementById('prevSlide');
+    const nextButton = document.getElementById('nextSlide');
+    let currentIndex = 0;
+
+    function updateCarousel(index) {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      thumbs.forEach((thumb, i) => thumb.classList.toggle('active', i === index));
+      currentIndex = index;
+    }
+
+    function openModal() {
+      carouselModal.classList.add('active');
+      carouselModal.setAttribute('aria-hidden', 'false');
+      updateCarousel(currentIndex);
+    }
+
+    function closeModal() {
+      carouselModal.classList.remove('active');
+      carouselModal.setAttribute('aria-hidden', 'true');
+    }
+
+    openCarousel.addEventListener('click', (event) => {
+      event.preventDefault();
+      openModal();
+    });
+
+    closeCarousel.addEventListener('click', closeModal);
+
+    prevButton.addEventListener('click', () => {
+      const nextIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel(nextIndex);
+    });
+
+    nextButton.addEventListener('click', () => {
+      const nextIndex = (currentIndex + 1) % slides.length;
+      updateCarousel(nextIndex);
+    });
+
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener('click', () => {
+        const index = Number(thumb.dataset.index);
+        updateCarousel(index);
+      });
+    });
+
+    carouselModal.addEventListener('click', (event) => {
+      if (event.target === carouselModal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (!carouselModal.classList.contains('active')) return;
+      if (event.key === 'Escape') closeModal();
+      if (event.key === 'ArrowRight') nextButton.click();
+      if (event.key === 'ArrowLeft') prevButton.click();
+    });
+  </script>
+</body>
+</html>
